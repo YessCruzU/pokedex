@@ -1,0 +1,105 @@
+$primary-color: #566CD6;
+$bg-color: #F2F4FF;
+$bg-color-two: #FBFCFF;
+$placeholder: #40415E;
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.sidebars{
+    background-color: $primary-color;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+}
+.col-white{    
+    background-image: linear-gradient($bg-color, $bg-color-two);
+    height: 100vh;     
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    overflow: hidden;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    background-color: #196e76;
+    line-height: 1.2;
+  }
+  /**
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    contenteditable attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that are clearfixed.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
+  .cf:before,
+  .cf:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+  
+  .cf:after {
+      clear: both;
+  }
+  
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  .cf {
+      *zoom: 1;
+  }
+  
+  
+  .content {
+    padding: 0 15px;
+    width: 80%;
+  }
+  .content h1 {
+    margin-top: 0;
+  }
+  .content p,
+  .sidebar p{
+    font-family: "BLOKKNeue-Regular";
+  }
+  .sidebar {
+    padding: 15px 90px;
+    width: 20%;
+    background-color: $primary-color;
+    height: 100vh;
+   
+    color: #fff;
+  }
+  .sidebar h3 {
+    margin: 0;
+  }
+  .content,
+  .sidebar {
+    float: left;
+  }
+  
+  
+  /* The sticky */
+  .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+  }
+  .h-bottom{
+      height: 100vh;
+  }
+  .p-bottom{
+      position:absolute;
+      top: 91%;
+      left: 40%;
+
+  }
