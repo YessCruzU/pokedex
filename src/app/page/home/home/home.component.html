@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-lg-3 cursor"
+    *ngFor="let pokemon of pokemons | paginate: {itemsPerPage: 20, currentPage: page, totalItems: totalPokemons}"
+    (click)="getDetail(pokemon.id)">
+    <div class="shadow p-3 mb-4 bg-white rounded text-center">
+      <h1 class="mt-2">{{pokemon.name | titlecase}}</h1>
+      <h3>{{pokemon.id | number: '3.0'}}</h3>
+      <img src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon.id}}.png" class="img-fluid img-size m-3"
+        alt="Image not found">
+      <div class="row mt-4">
+        <div class="col text-center">
+          <button class="type"
+            [ngClass]="type.type.name "
+            type="button" color="primary" *ngFor="let type of pokemon.types">{{type.type.name | titlecase}}</button>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<pagination-controls class="text-center" 
+(pageChange)="page = $event; pokemons = []; getPokemons()"></pagination-controls>

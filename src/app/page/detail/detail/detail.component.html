@@ -1,0 +1,38 @@
+
+<app-button-back (click)="routerPage('home')" ></app-button-back>
+
+<div class="row">
+    <div class="col-sm-12 col-md-3 col-lg-4 pl-5">
+        <div class="shadow p-3 mb-5 bg-white rounded text-center">
+            <img src="https://pokeres.bastionbot.org/images/pokemon/{{detailPokemon.id}}.png"
+                class="img-fluid img-size m-3" alt="Responsive image">
+            <div class="text-center">
+                <img [src]="detailPokemon.sprites.front_default" class="img-fluid" alt="Responsive image">
+                <img [src]="detailPokemon.sprites.back_default" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-9 col-lg-8 pr-5">
+        <div class="shadow p-3  mb-5 bg-white rounded">
+            <div class="card-body">
+                <h1 class="mt-2">{{detailPokemon.name | titlecase}}</h1>
+                <button class="type mt-3 mb-5"
+                    [ngClass]="type.type.name"
+                    type="button" color="primary" *ngFor="let type of detailPokemon.types">{{type.type.name |
+                    titlecase}}</button>
+                <h5>Pokedex Number</h5>
+                <h5>{{detailPokemon.id}}</h5>
+                <hr class="solid">
+                <h5>Height</h5>
+                <h5>{{detailPokemon.height}}</h5>
+                <hr class="solid">
+                <h5>Weight</h5>
+                <h5>{{detailPokemon.weight}}</h5>
+                <hr class="solid">
+                <h5>Shiny</h5>
+                <img [src]="detailPokemon.sprites.front_shiny" class="img-fluid" alt="Responsive image">
+                <img [src]="detailPokemon.sprites.back_shiny" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+</div>

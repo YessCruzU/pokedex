@@ -1,2 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
+$primary-color: #566CD6;
+$bg-color: #F2F4FF;
+$bg-color-two: #FBFCFF;
+$placeholder: #40415E;
+$red: red;
+
+.img-size{
+    max-width: 70%;
+}
+.fire{
+    background-color: #f49d40;
+}
+.water{
+    background-color: #83c6d6;
+}
+.bug{
+    background-color: #dec987;
+}
+.poison{
+    background-color: #9267af;
+}
+.grass{
+    background-color: #64a30b;
+}
+.flying{
+    background-color:#abc9ff ;
+}
+.electric{
+    background-color: #f4e181 ;
+}
+.ground{
+    background-color: #fad0a5 ;
+}
+.rock{
+    background-color: #424242 ;
+}
+.fairy{
+    background-color: #f1ccd5 ;
+}
+.dragon{
+    background-color: #97b3e6 ;
+}
+.psychic{
+    background-color: #eaeda1 ;
+}
+.fighting{
+    background-color: #d2cac0 ;
+}
+.normal{
+    background-color: #b6b1b1 ;
+}
+.steel{
+    background-color: #9e9e9e ;
+}
+.ice{
+    background-color: #007bff80 ;
+}
+.ghost{
+    background-color: #1b405280 ;
+}
+
+.type{
+    border-radius: 14px;
+    border: none;
+    padding: 3px 9px;
+    margin: 2px;
+    color: white;
+    pointer-events: none;
+}
